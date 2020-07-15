@@ -33,8 +33,14 @@ body{
 .main{
   background-color: Blue;
   padding:30px 15px;
-  overflow:hidden;
+  /* overflow:hidden; */
   min-height: 450px;
+}
+.clearfix::after{
+  content:"";
+  background:yellow;
+  clear:both;
+  display:block;
 }
 .group{
   float:left;
@@ -44,15 +50,17 @@ body{
 .group1{
   background-color: pink;
   width:250px;
-  float:right;
+  float:left;
 }
 .group2{
   background-color: lightgreen;
   width:380px;
+  float:left;
 }
 .group3{
   background-color: coral;
   width:190px;
+  float:left;
 }
 .slogan{
   background-color: orange;
