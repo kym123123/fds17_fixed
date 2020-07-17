@@ -1,6 +1,6 @@
 @import url(./normalize.css);
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-/* @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css); */
+/* @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css); */
 @import url(./fontello.css);
 *,*::before, *::after{
   box-sizing:border-box;
@@ -9,9 +9,9 @@ html{
   font-size:10px;
 }
 body{
-  font-size:1.6rem; 
-  background-color: #ffF;
+  font-size:1.6rem;
   color:#181818;
+  background: url(./images/bg_flower.png) no-repeat 50% 0 scroll,#fff linear-gradient(to bottom,#ccc 0%,#fff 70%, #fff 100%) ;
   font-family: 'Spoqa Han Sans';
   font-weight:400;
 }
@@ -31,7 +31,6 @@ a{
 }
 /* 레이아웃 */
 .container{
-  background-color: #ccc;
   display:flex;
   flex-flow:column nowrap;
   align-items: center;
@@ -200,9 +199,67 @@ a{
 .sub-menu6{
   display:none;
 }
+/* 비주얼 */
+@keyframes textAni{
+  0%{
+    font-size: 12px;
+    color:rgba(0,0,0,0);
+    /* 작은글자+투명 */
+    transform:translate(0,0);
+    /* 이 translate값은 초기값과 같기때문에 여기서는 이값을 기입하지 않아도 되긴한다. */
+  }
+  100%{
+    font-size:24px;
+    color:rgba(0,0,0,1);
+    /* 큰글자+불투명 */
+    transform:translate(400px, 75px);
+  }
+}
+@keyframes bgAni{
+  0%{opacity:1;}
+  100%{opacity: 0;}
+}
+
 .visual{
-  background-color: lime;
   height:120px;
+  position:relative;
+}
+.visual::before,.visual::after{
+  animation: bgAni 2000ms ease-in-out infinite alternate;
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-repeat: no-repeat;
+}
+.visual::before{
+  /* background라는 대표속성 쓰면 위에 준 background repeat를 오버라이트 하게됨. 따라서 개별속성으로 */
+  background-image: url(./images/ani_flower_01.png),
+  url(./images/ani_flower_02.png);
+  /* 이미지 슬라이스를 애초에 잘못해서 위의 공백을 없애기 위해서 포지션 조정 */
+  background-position: 0 -10px,670px 0;
+  /* 이미지도 쉼표로 두개, 포지션도 쉼표로 두개  */
+}
+.visual::after{
+  /* background라는 대표속성 쓰면 위에 준 background repeat를 오버라이트 하게됨. 따라서 개별속성으로 */
+  background-image: url(./images/ani_flower_03.png),
+  url(./images/ani_flower_04.png);
+  /* 이미지 슬라이스를 애초에 잘못해서 위의 공백을 없애기 위해서 포지션 조정 */
+  background-position: 300px 0,800px 20px;
+  /* 이미지도 쉼표로 두개, 포지션도 쉼표로 두개  */
+  animation-delay:1500ms;
+}
+.visual-text{
+  background-color: yellow;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size:2.4rem;
+  animation-name:textAni;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  width:500px;
+  animation: textAni 5000ms forwards;
 }
 /* 메인 콘텐츠 */
 .main{
