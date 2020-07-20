@@ -16,7 +16,7 @@ body{
   font-weight:400;
 }
 /* 숨김 콘텐츠 */
-.a11y-hidden{
+.a11y-hidden, legend{
   position: absolute;
   width:0px;
   height:0px;
@@ -283,6 +283,102 @@ a{
   background-color: coral;
   width:190px;
 }
+/* 로그인 */
+.login{
+  background-color: #db5629;
+  background-image: radial-gradient(circle at right top,
+  #ef962f 0%, #db5629);
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 0 #ccc;
+  padding:10px;
+  font-size:1.4rem;
+}
+.login-form{
+  background-color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding:10pX 10px 0 10px;
+}
+.login-form div{
+  width:150px;
+  margin-bottom:5px;
+}
+.login-form fieldset{
+  margin:0;
+  padding:0;
+  border:0;
+  position: relative;
+  padding-bottom:5px;
+  border-bottom:1px solid #aaa;
+}
+.login-form input{
+ width:90px;
+ height:24px;
+ border:1px solid #aaa;
+ padding:1px 1px 1px 0.5em; 
+}
+.login-form label{
+  display:inline-block;
+  width:55px;
+}
+.login-heading{
+  margin-top:0;
+  margin-bottom:10px;
+  color:yellow;
+  font-size:1.5rem;
+  font-weight:700;
+  padding-left:10px;
+  /* 한글자만큼 안으로 밀기*/
+}
+
+#userEmail{
+  width:90px;
+}
+#userPw{
+  width:90px;
+}
+.btn-login{
+  width: 50px;
+  height: 52px;
+  border-radius: 3px;
+  border:0;
+  padding:5px;
+  color:#fff;
+  cursor:pointer;
+  background-color: #db5629;
+  font-size:1.3rem;
+  position: absolute;
+  top:0;
+  right:0;
+}
+.member-only{
+  background-color: #fff;
+  margin:0;
+  padding:10px 10px 10px 10px;
+  list-style:none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.member-only li:first-child{
+  float:left;
+
+}
+.member-only li:last-child{
+  float:right;
+}
+.member-only a{
+  background-color: yellow;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+.member-only li::before{
+  content:'\e803';
+  font-family: 'fontello';
+  display: inline-block;
+  margin-right: .2em;
+  color:#db5629;
+}
+/* 슬로건 */
 .slogan{
   background-color: orange;
 
