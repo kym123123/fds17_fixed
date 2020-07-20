@@ -102,11 +102,6 @@ a{
   border-radius: 0 0 5px 5px;
   height:50px;
 }
-.menu::after{
-  content:"";
-  display:block;
-  clear:both;
-}
 .menu-item{
   float:left;
   position:relative;
@@ -359,6 +354,11 @@ a{
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+.clearfix::after{
+  content:"";
+  clear:both;
+  display:block;
+}
 .member-only li:first-child{
   float:left;
 
@@ -367,7 +367,6 @@ a{
   float:right;
 }
 .member-only a{
-  background-color: yellow;
   padding-top:5px;
   padding-bottom:5px;
 }
