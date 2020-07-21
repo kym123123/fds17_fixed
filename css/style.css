@@ -31,13 +31,14 @@ a{
 }
 /* 레이아웃 */
 .container{
-  display:flex;
+  /* display:flex;
   flex-flow:column nowrap;
-  align-items: center;
+  align-items: center; */
 }
 .header,.visual,.main,.slogan,.footer{
   width: 940px;
   box-sizing:border-box;
+  margin:0 auto;
 }
 .footer-bg{
   align-self: stretch;
@@ -50,8 +51,10 @@ a{
 .header{
   background-color: #fff;
   border-radius: 0 0 15px 15px;
-  padding:0 30px 0 30px;
-  position: relative;;
+  padding:1px 30px 1px 30px;
+  /* 1px의 패딩을 줘서 마진이 빠져나가는것을 막은것 */
+  /* nav의 마진이 빠져나가는것을 막기위해서 아래로도 1px패딩 */
+  position: relative;
 }
 /* 로고 */
 .logo{
@@ -258,7 +261,8 @@ a{
 }
 /* 메인 콘텐츠 */
 .main{
-  background-color: Blue;
+  background-color: #fff;
+  border-radius: 15px 15px 0 0;
   min-height: 450px;
   display:flex;
   flex-flow:row nowrap;
@@ -267,15 +271,12 @@ a{
   align-items: flex-start;
 }
 .group1{
-  background-color: pink;
   width:250px;
 }
 .group2{
-  background-color: lightgreen;
   width:380px;
 }
 .group3{
-  background-color: coral;
   width:190px;
 }
 /* 로그인 */
@@ -383,7 +384,6 @@ a{
   margin-top:25px;
   margin-bottom:0;
   padding-left:0;
-  background-color: yellow;
   list-style: none;
 }
 .validation-list a{
@@ -399,10 +399,64 @@ a{
   background-color:#ccc;
   /* background-position:0 0; */
   display:block;
+  font-size:1.4rem;
 }
 .validation-list a:hover{
   color:#f00;
 }
+/* 웹 관련 용어 */
+.term{
+  background: #ccc linear-gradient(180deg,#ccc,#eee);;
+  padding:10px 15px;
+  border:1px solid #aaa;
+  margin:20px 0;
+  border-radius:5px;
+  padding:15px;
+}
+.term-heading{
+  margin:0;
+  font-size:1.6rem;
+  font-weight:700;
+}
+.term-list{
+  margin-top:10px;
+  margin-bottom:0;
+}
+.term-list >div{
+  margin-top:10px;
+  /* 이렇게하면 밑에 용어추가되어도 여백이 추가되면서 자연스러움 */
+}
+.odd{
+}
+.term-list-subject{
+  font-size:1.4rem;
+  width:145px;
+  float:right;
+  color:#296897;
+}
+.term-list-thumbnail{
+  margin-left:0;
+  float:left;
+}
+.term-list-brief{
+  margin-left:0;
+  width:145px;
+  float:right;
+  margin-top:5px;
+  
+  font-size:1.4rem;
+}
+/* even */
+.even .term-list-subject{
+  float:left;
+}
+.even .term-list-thumbnail{
+  float:right;
+}
+.even .tern-list-brief{
+  float:left;
+}
+/* even */
 /* 슬로건 */
 .slogan{
   background-color: orange;
