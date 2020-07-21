@@ -286,6 +286,7 @@ a{
   border-radius: 5px;
   box-shadow: 5px 5px 0 0 #ccc;
   padding:10px;
+  width:calc(100% - 5px);
   font-size:1.4rem;
 }
 .login-form{
@@ -376,6 +377,31 @@ a{
   display: inline-block;
   margin-right: .2em;
   color:#db5629;
+}
+/* 유효성 검사 배너 링크 */
+.validation-list{
+  margin-top:25px;
+  margin-bottom:0;
+  padding-left:0;
+  background-color: yellow;
+  list-style: none;
+}
+.validation-list a{
+  padding:8px 10px 8px 45px;
+  margin-top:10px;
+  border:1px solid #aaa;
+  border-radius:20px;
+  background-position:20px 50%, 0 0;
+  /* y는 상자의 중심과 박스아이콘의 중심을 일치시키기위해 */
+  background-image:url(./images/validation_icon.png),
+   linear-gradient(180deg,#ccc,#eee);
+  background-repeat:no-repeat,repeat;
+  background-color:#ccc;
+  /* background-position:0 0; */
+  display:block;
+}
+.validation-list a:hover{
+  color:#f00;
 }
 /* 슬로건 */
 .slogan{
