@@ -511,36 +511,42 @@ a{
   font-size:1.4rem;
   padding:5px 10px;
 }
-/* 공지사항,자료실 */
+/* 공지사항 */
 .board{
   margin-top:20px;
   width:380px;
-  height:185px;
+  height:200px;
   font-size:1.4rem;
-  background-color: blue;
+  position:relative;
 }
 .notice{
-  background-color: green;
 }
-.notice-heading{
+.tab-act{
+}
+.tab-act .notice-heading{
   font-size:1.4rem;
   padding:5px 10px 5px 10px;
   margin:0;
+  font-weight:400;
   color:#db5629;
-  background-color: white;
-  display:inline-block;
   border:1px solid #db5629;
   border-bottom:0;
   border-radius:5px 5px 0 0;
+  float:left;
 }
 .notice-list{
   padding:0;
   margin:0;
   list-style:none;
-  background-color: tomato;
+  margin-top:30px;
+  position:absolute;
+  z-index:10;
+  height:150px;
+  background-color: #fff;
 }
 .notice-list li{
-  padding:10px 5px 10px 5px;
+  padding:5px 0 5px 0;
+  width:380px;
 }
 .notice-list li a::before{
   content:'\f192';
@@ -550,13 +556,73 @@ a{
   margin-right: .2em;
 }
 .notice-list li a{
-  float:left;
+  width:300px;
+  height:20px;
+  display:inline-block;
+  text-overflow: ellipsis;
+
 }
 .notice-list li time{
-  float:right;
+  display:inline-block;
+  vertical-align: top;
 }
 .notice-more{
+  
+  top:0;
+  right:0;
   position:absolute;
+}
+/* 자료실 */
+.pds{
+}
+.pds-heading{
+  font-size:1.4rem;
+  font-weight: 400;
+  padding:5px 10px 5px 10px;
+  margin:0;
+  background:#ccc linear-gradient(180deg,#ccc,#eee);
+  color:#666;
+  border:1px solid #aaa;
+  border-radius:5px 5px 0 0;
+  float:left;
+  cursor:pointer;
+}
+.pds-list{
+  padding:0;
+  margin:0;
+  list-style:none;
+  position:absolute;
+  height:150px;
+  margin-top:30px;
+  background-color: #fff;
+}
+.pds-list li{
+  padding:5px 0 5px 0;
+  width:380px;
+}
+.pds-list li a{
+  width:300px;
+  height:20px;
+  display:inline-block;
+}
+.pds-list li a::before{
+  content:'\f192';
+  display: inline-block;
+  width: 1em;
+  font-family: 'fontello';
+  margin-right: .2em;
+}
+.pds-list li time{
+  display:inline-block;
+  vertical-align: top;
+}
+.pds-more{
+  position:absolute;
+  top:0;
+  right:0;
+}
+.pds-more.icon-plus::before{
+  color:green;
 }
 /* 슬로건 */
 .slogan{
