@@ -139,7 +139,22 @@
           </dl>
         </section>
       </div>
-      <div class="group group2">group2</div>
+      <div class="group group2">
+        <h2 class="a11y-hidden">검색</h2>
+        <form action="https://formspree.io/mwkrwgrg"
+        method="POST" class="search-form">
+          <fieldset>
+            <legend>검색 폼</legend>
+            <div role="group">
+              <label for="search" class="label-search">자료검색</label>
+              <!-- 빈값이 검색되지 않게끔 required추가, 보내기 전에client단계에서 검증 -->
+              <input type="search" id="search" required placeholder="검색어를 입력하세요."
+              name="keyword"/>
+              <button type="submit" class="btn-search">검색</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
       <div class="group group3">group3</div>
     </main>
     <article class="slogan">slogan</article>
