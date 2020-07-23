@@ -139,11 +139,15 @@ a{
   padding-left:0;
   list-style: none;
   white-space:nowrap;
+  display:none;
   /* 영구적으로 숨길때는 display:none쓰지말고 다른방법쓸것 */
   /* 상호작용으로 다시 드러내고 숨기고 할때는 써도됌. */
 }
 
 /* 서브메뉴 1~3은 왼쪽에서 오른쪽으로 펼쳐지게 */
+.menu-act .sub-menu{
+  display:block;
+}
 .sub-menu1,
 .sub-menu2,
 .sub-menu3{
@@ -179,24 +183,6 @@ a{
   content: '\e800';
 }
 
-.sub-menu1{
-  display:block;
-}
-.sub-menu2{
-  display:none;
-}
-.sub-menu3{
-  display:none;
-}
-.sub-menu4{
-  display:none;
-}
-.sub-menu5{
-  display:none;
-}
-.sub-menu6{
-  display:none;
-}
 /* 비주얼 */
 @keyframes textAni{
   0%{
@@ -514,18 +500,23 @@ a{
 
 /* 공지사항 및 자료실 -강사님 코드1 */
 .board{
-  background-color: yellow;
+  padding-top:45px;
   margin-top:20px;
   position: relative;
-  min-height:180px;
   font-size:1.4rem;
 }
 .notice-heading, .pds-heading{
-  background-color: pink;
-  float:left;
+  position:absolute;
+  top:0;
   margin:0;
   font-size:1.4rem;
   font-weight: 400;
+}
+.notice-heading{
+  left:0;
+}
+.pds-heading{
+  left:73px;
 }
 .tab{
   color:#666;
@@ -553,22 +544,16 @@ a{
   display: block;
 }
 .notice-list, .pds-list{
-  background-color: silver;
   list-style: none;
   margin:0;
   padding-left:0;
-  position:absolute;
-  top:45px;
-  left:0;
-  width:100%;
+  min-height:130px;
 }
 .notice-list li, .pds-list li{
-  background-color: orange;
   margin-bottom:10px;
 }
 .notice-list a, 
 .pds-list a{
-  background-color: skyblue;
   float:left;
   width:300px;
   text-overflow: ellipsis;
@@ -576,24 +561,20 @@ a{
   white-space: nowrap;
 }
 .notice-list li::after, 
-.notice-list li::after{
+.pds-list li::after{
   content:"";
   clear:both;
   display:block;
 }
 .notice-list li a::before, 
-.notice-list li a::before{
+.pds-list li a::before{
   font-family: 'fontello';
   content:'\f192';
   display:inline-block;
   margin-right:.2em;
 }
 .notice-list time, .pds-list time{
-  background-color: violet;
   float:right;
-}
-.pds-list{
-  background-color: orange;
 }
 .notice-more, .pds-more{
   position: absolute;
