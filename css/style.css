@@ -511,7 +511,103 @@ a{
   font-size:1.4rem;
   padding:5px 10px;
 }
-/* 공지사항 */
+
+/* 공지사항 및 자료실 -강사님 코드1 */
+.board{
+  background-color: yellow;
+  margin-top:20px;
+  position: relative;
+  min-height:180px;
+  font-size:1.4rem;
+}
+.notice-heading, .pds-heading{
+  background-color: pink;
+  float:left;
+  margin:0;
+  font-size:1.4rem;
+  font-weight: 400;
+}
+.tab{
+  color:#666;
+  border:1px solid #aaa;
+  border-radius:5px 5px 0 0;
+  padding:5px 10px;
+  display:block;
+  background:#ccc linear-gradient(180deg,#ccc,#eee);
+}
+.tab-act .tab{
+  color:#db5629;
+  border-color:#db5629 #db5629 #fff #db5629;
+}
+.notice-list,
+.pds-list, 
+.notice-more,
+.pds-more{
+  display: none;
+}
+
+.tab-act .notice-list,
+.tab-act .pds-list, 
+.tab-act .notice-more,
+.tab-act .pds-more{
+  display: block;
+}
+.notice-list, .pds-list{
+  background-color: silver;
+  list-style: none;
+  margin:0;
+  padding-left:0;
+  position:absolute;
+  top:45px;
+  left:0;
+  width:100%;
+}
+.notice-list li, .pds-list li{
+  background-color: orange;
+  margin-bottom:10px;
+}
+.notice-list a, 
+.pds-list a{
+  background-color: skyblue;
+  float:left;
+  width:300px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.notice-list li::after, 
+.notice-list li::after{
+  content:"";
+  clear:both;
+  display:block;
+}
+.notice-list li a::before, 
+.notice-list li a::before{
+  font-family: 'fontello';
+  content:'\f192';
+  display:inline-block;
+  margin-right:.2em;
+}
+.notice-list time, .pds-list time{
+  background-color: violet;
+  float:right;
+}
+.pds-list{
+  background-color: orange;
+}
+.notice-more, .pds-more{
+  position: absolute;
+  /* 패딩으로 내려온만큼 다시 구석으로붙히기 위해서 topright수정 */
+  top: -8px;
+  right: -8px;
+  padding:8px;
+}
+.icon-plus::before{
+  color:hsla(110,70%,50%,1);
+}
+
+
+/* 공지사항 내코드
 .board{
   margin-top:20px;
   width:380px;
@@ -560,11 +656,13 @@ a{
   height:20px;
   display:inline-block;
   text-overflow: ellipsis;
-
+  overflow: hidden;
+  white-space: nowrap;
 }
 .notice-list li time{
   display:inline-block;
   vertical-align: top;
+  
 }
 .notice-more{
   
@@ -573,7 +671,7 @@ a{
   position:absolute;
 }
 /* 자료실 */
-.pds{
+/* .pds{
 }
 .pds-heading{
   font-size:1.4rem;
@@ -604,6 +702,9 @@ a{
   width:300px;
   height:20px;
   display:inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .pds-list li a::before{
   content:'\f192';
@@ -623,7 +724,7 @@ a{
 }
 .pds-more.icon-plus::before{
   color:green;
-}
+} */ */
 /* 슬로건 */
 .slogan{
   background-color: orange;
