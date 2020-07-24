@@ -23,6 +23,9 @@ body{
   margin:-1;
   overflow: hidden;
   clip-path: polygon(0 0, 0 0, 0 0);
+  /* 익스플로러에서 legend안숨겨지는것 숨기기위해서 rect함수 사용 */
+  clip:rect(0 0 0 0);
+  clip:rect(0,0,0,0);
 }
 /* 링크 스타일 */
 a{
