@@ -760,6 +760,148 @@ a{
   top:-8px;
   right:-8px;
 }
+/* 신규이벤트, 관련사이트 강사님코드 */
+.gradient-box{
+  border:1px solid #aaa;
+  border-radius: 5px;
+  padding:10px;
+  background: #ccc linear-gradient(180deg,#ccc,#eee);
+}
+/* 신규이벤트 */
+/* .btn-wrap{
+  height:18px;
+  background-color: yellow;
+}
+.btn-prev, .btn-next{
+  background: #ccc url(./images/back_forward.png) no-repeat;
+  width:19px;
+  height:100%;
+  cursor: pointer;
+  overflow:hidden;
+  border:0;
+  padding:18px 0 0 0;
+}
+.btn-next{
+  background-position: -35px 0;
+} */
+.event{
+  background-color: yellow;
+  border-bottom:1px solid #aaa;
+  position: relative;
+}
+.event-heading{
+  font-size:1.6rem;
+  margin:0;
+}
+.event-heading span{
+  color: #db5629;
+}
+.event-thumbnail, .event-brief{
+  margin:10px 0;
+}
+.event-thumbnail img{
+  border:1px solid #aaa;
+  box-shadow:5px 5px 0 0 #999;
+}
+.event-brief em{
+  font-style: normal;
+}
+.btn-wrap{
+  background-color: pink;
+  position:absolute;
+  top:0;
+  right:0;
+}
+.btn-prev,
+.btn-next{
+  background-color: #ccc;
+background-image: url(./images/back_forward.png);
+background-repeat: no-repeat;
+width:19px;
+height:18px;
+border:0;
+padding:0;
+cursor: pointer;
+vertical-align: top;
+}
+.btn-next{
+  background-position: -35px 0;
+}
+/* 관련사이트 */
+/* 내코드
+  .gradient-box{
+  padding:15px 10px;
+  border:1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  background: #ccc linear-gradient(180deg,#ccc,#eee);
+}
+.event{
+  position:relative;  
+  border-bottom:1px solid #aaa;
+}
+.event-heading{
+  font-size:1.6rem;
+  padding:0;
+  margin:0;
+  margin-bottom:15px;
+}
+.event-heading span{
+  color:#db5629;
+}
+.event-thumbnail{
+  padding:0;
+  margin:0;
+  border:1px solid #aaa;
+  box-shadow:5px 5px 0 #666;
+  width:160px;
+  height:80px;
+  margin-bottom:5px;
+}
+.event-thumbnail img{
+}
+.event-brief{
+  font-size:1.5rem;
+  
+}
+.event-brief em{
+  text-decoration: none;
+}
+.btn-wrap{
+  display: flex;
+  position:absolute;
+  justify-content: space-between;
+  width: 70px;
+  top:-15px;
+  right:-10px;
+  padding:15px 10px;
+}
+.btn-prev, .btn-next{
+  text-indent: -999px;
+  overflow:hidden;
+  width:19px;
+  height:18px;
+  border:0;
+  background-image: url(./images/back_forward.png);
+}
+.btn-prev{
+  background-position: 0px 50%;
+}
+.btn-next{
+  background-position:74px 50%;
+}
+.related{
+  margin-top:15px;
+}
+.related-heading{
+  font-size:1.6rem;
+  padding:0;
+  margin:0;
+  margin-bottom:15px;
+}
+.related-heading span{
+  color:#db5629;
+} */
+
 /* 슬로건 */
 .slogan{
   background-color: orange;
