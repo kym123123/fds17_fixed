@@ -788,15 +788,14 @@ a{
   background-position: -35px 0;
 } */
 .event{
-  background-color: yellow;
   border-bottom:1px solid #aaa;
   position: relative;
 }
-.event-heading{
+.event-heading, .related-heading{
   font-size:1.6rem;
   margin:0;
 }
-.event-heading span{
+.event-heading span,.related-heading span{
   color: #db5629;
 }
 .event-thumbnail, .event-brief{
@@ -810,7 +809,6 @@ a{
   font-style: normal;
 }
 .btn-wrap{
-  background-color: pink;
   position:absolute;
   top:0;
   right:0;
@@ -831,6 +829,35 @@ vertical-align: top;
   background-position: -35px 0;
 }
 /* 관련사이트 */
+.related{
+  margin-top: 10px;
+}
+.related-list{
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0 0 0;
+  border-radius: 5px;
+  background-color: #fff;
+  border:1px solid #aaa;
+  overflow:hidden;
+  height:27px;
+  transition-property:padding,height;
+  transition:all 200ms 
+}
+.related-list li{
+  padding:2px 5px;
+  font-size:1.4rem;
+}
+.related-list li a{
+  display:block;
+  text-indent: 1em;
+  line-height: 20px;
+}
+.related-list:hover{
+  height: 147px;
+  padding:10px 0;
+}
+
 /* 내코드
   .gradient-box{
   padding:15px 10px;
