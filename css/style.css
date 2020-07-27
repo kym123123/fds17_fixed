@@ -1044,11 +1044,11 @@ vertical-align: top;
 .slogan-brief q::before{
   /* 이미content가 내부적으로 잇기때문에 안써도 된다, */
   font-size: 3rem;
-  /* vertical-align: top; */
+  vertical-align: middle;
   /* 본래위치를 기준으로 미세하기 위치조정할때 relative사용 */
-  position: relative;
-  top: 10px;
-  margin-right: 5px;
+  /* position: relative; */
+  /* top: 10px;
+  margin-right: 5px; */
 }
 .slogan-brief q::after{
   /* 내부적으로 들어간 닫는 겹따옴표 안쓰겟다는 선언 */
