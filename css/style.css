@@ -1057,8 +1057,98 @@ vertical-align: top;
 .slogan-brief span{
 }
 .footer-bg{
-  background-color: purple;
+  background: #ccc linear-gradient(180deg,#ccc,#eee);
+  padding-left:20px;
+  padding-right: 20px;
+  padding-top:20px;
+  padding-bottom:20px;
 }
+/* .footer{
+  padding:0 0 20px 170px;
+  position: relative;
+}
+.footer-logo{
+  position: absolute;
+  top:40px;
+  left:35px;
+}
+.guide-list{
+  display: flex;
+  background-color: #7b8385;
+  font-size: 0;
+  color:#fff;
+  list-style: none;
+  justify-content: space-around;
+  border-radius: 10px;
+  margin:20px 0 10px;
+  width:670px;
+  padding:0;
+  text-transform: uppercase;
+}
+.guide-list li a{
+  font-size:1.4rem;
+  display:inline-block;
+  padding:10px 0;
+}
+.address{
+  font-style: normal;
+  font-size:1.3rem;
+}
+.copyright{
+  font-size:1.3rem;
+}
+.badge{
+  position: absolute;
+  top:10px;
+  right:0px;
+} */
 .footer{
-  background-color: skyblue;
+  padding:0 100px 0 170px;
+  position: relative;
+}
+/* 푸터로고 */
+.footer-logo{
+  position: absolute;
+  top: 60px;
+  left: 35px;
+}
+/* 가이드링크 */
+.guide-list{
+  margin: 0;
+  /* 포커스되었을때 포커스 아웃라인이 버튼내부에 들어오게 하기위한 패딩 */
+  padding:4px 20px;
+  list-style:none;
+  background-color: #7b8385;
+  color:#fff;
+  display:flex;
+  font-size: 1.4rem;
+  flex-flow:row nowrap;
+  white-space: nowrap;
+  border-radius:5px;
+  justify-content: space-between;
+}
+.guide-list a{
+  display: block;
+  padding:8px 15px;
+  text-transform: uppercase;
+}
+/* 주소및연락처 */
+.address{
+  font-size:1.4rem;
+  font-style: normal;
+  margin:10px 0 5px;
+}
+.address span{
+  margin-right:10px;
+}
+/* 저작권 */
+.copyright{
+  font-size:1.4rem;
+  display:block;
+}
+/* 적용기술배지 */
+.badge{
+  position: absolute;
+  top: 0;
+  right: 0;
 }
